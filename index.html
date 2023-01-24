@@ -5,7 +5,7 @@
 	<title></title>
 	<meta name="generator" content="LibreOffice 7.3.7.2 (Linux)"/>
 	<meta name="created" content="2023-01-23T23:54:33.935675256"/>
-	<meta name="changed" content="2023-01-24T23:48:26.258382601"/>
+	<meta name="changed" content="2023-01-25T00:47:43.340883238"/>
 	<style type="text/css">
 		@page { size: 21cm 29.7cm; margin: 2cm }
 		p { line-height: 115%; margin-bottom: 0.25cm; background: transparent }
@@ -152,11 +152,19 @@ Terms and definitions  </span><b>.  .  .  .  .  .  .  .  .  .  .  .
 Environments  </span><b>.  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
 .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
 .  .</b><span style="font-weight: normal">            6</span></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><span style="font-weight: normal">3</span><span style="font-weight: normal">.
+</span><span style="font-weight: normal">Limits</span><span style="font-weight: normal">
+       </span><b>.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
+.</b><span style="font-weight: normal">            </span><span style="font-weight: normal">6</span></p>
 <p style="font-weight: normal; line-height: 100%; margin-bottom: 0cm">
 <br/>
 
 </p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="font-weight: normal">3.
+<p style="line-height: 100%; margin-bottom: 0cm"><span style="font-weight: normal">4</span><span style="font-weight: normal">.
 Parsing</span><b>      .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 
 .  .  .</b><span style="font-weight: normal">            </span><span style="font-weight: normal">6</span></p>
@@ -184,7 +192,7 @@ structure summary </span><span style="font-weight: normal">(informative)
 </p>
 <p style="line-height: 100%; margin-bottom: 0cm"><span style="font-weight: normal">Contributions</span><span style="font-weight: normal">
      .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
- .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .            </span><span style="font-weight: normal">8</span></p>
+ .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .            </span><span style="font-weight: normal">9</span></p>
 <p style="line-height: 100%; margin-bottom: 0cm; page-break-before: always">
 <font size="5" style="font-size: 18pt"><b>Introduction</b></font></p>
 <p style="font-weight: normal; line-height: 100%; margin-bottom: 0cm">
@@ -253,9 +261,11 @@ data</p>
 <p style="line-height: 100%; margin-bottom: 0cm"><font size="4" style="font-size: 15pt"><b>1.6
 data</b></font></p>
 <p style="line-height: 100%; margin-bottom: 0cm">sequence of bytes
-that denotes one of: the <i>magic number</i>, the <i>alignment of </i><i>the
-</i><i>code</i>, the <i>alignment of the heap</i>, the <i>size of the
-heap</i>, the <i>size of the stack</i>, and the <i>entry-point</i>.</p>
+that denote on<span style="font-style: normal">e of: the magic
+number, the alignment of </span><span style="font-style: normal">the
+</span><span style="font-style: normal">code, the alignment of the
+heap, the size of the heap, the size of the stack, and the
+entry-point.</span></p>
 <p style="line-height: 100%; margin-bottom: 0cm"><br/>
 
 </p>
@@ -297,6 +307,14 @@ interpreter-defined</b></font></p>
 <p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
 process that is not defined by the standard, rather is left for the
 interpreter to document</p>
+<p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
+<br/>
+
+</p>
+<p style="font-style: normal; line-height: 100%; margin-bottom: 0cm"><font size="4" style="font-size: 15pt"><b>1.12
+value</b></font></p>
+<p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
+the result generated after a successful parse of data</p>
 <p style="line-height: 100%; margin-bottom: 0cm; page-break-before: always">
 <font size="5" style="font-size: 18pt"><b>2. Environments</b></font></p>
 <p style="line-height: 100%; margin-bottom: 0cm"><br/>
@@ -347,11 +365,61 @@ For an invalid </span></span><i><span style="font-weight: normal">extremely
 small file</span></i><span style="font-style: normal"><span style="font-weight: normal">,
 an interpreter is required to quit the parsing process and produce at
 least one diagnostic message.</span></span></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="5" style="font-size: 18pt"><b><span style="font-style: normal">3</span><span style="font-style: normal">.
+Limits</span></b></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><span style="font-style: normal"><span style="font-weight: normal">1
+This standard </span></span><span style="font-style: normal"><span style="font-weight: normal">imposes
+no</span></span><span style="font-style: normal"><span style="font-weight: normal">
+restrict</span></span><span style="font-style: normal"><span style="font-weight: normal">ions
+on</span></span><span style="font-style: normal"><span style="font-weight: normal">
+the number of bytes that can designate the code.</span></span></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><span style="font-style: normal"><span style="font-weight: normal">2
+The value of the alignment of the code shall lie within the range 0
+</span></span><span style="font-style: normal"><span style="font-weight: normal">to
+</span></span><span style="font-style: normal"><span style="font-weight: normal">4294967295
+inclusive.</span></span></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><span style="font-style: normal"><span style="font-weight: normal">3
+The value of the alignment of the heap shall lie within the range 0</span></span><span style="font-style: normal"><span style="font-weight: normal">
+to </span></span><span style="font-style: normal"><span style="font-weight: normal">4294967295
+inclusive.</span></span></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><span style="font-style: normal"><span style="font-weight: normal">4
+The value of the size of the heap shall lie within the range 0 </span></span><span style="font-style: normal"><span style="font-weight: normal">to
+</span></span><span style="font-style: normal"><span style="font-weight: normal">18446744073709551615
+inclusive.</span></span></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><span style="font-style: normal"><span style="font-weight: normal">5
+The value of the size of the stack shall lie within the range 0 </span></span><span style="font-style: normal"><span style="font-weight: normal">to
+</span></span><span style="font-style: normal"><span style="font-weight: normal">18446744073709551615
+inclusive.</span></span></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><span style="font-style: normal"><span style="font-weight: normal">6
+The value of the entry-point shall lie within the range 0 </span></span><span style="font-style: normal"><span style="font-weight: normal">to
+</span></span><span style="font-style: normal"><span style="font-weight: normal">18446744073709551615
+inclusive.</span></span></p>
 <p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
 <br/>
 
 </p>
-<p style="font-style: normal; line-height: 100%; margin-bottom: 0cm"><font size="5" style="font-size: 18pt"><b>3.
+<p style="font-style: normal; line-height: 100%; margin-bottom: 0cm"><font size="5" style="font-size: 18pt"><b>4.
 Parsing</b></font></p>
 <p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
 <br/>
@@ -364,7 +432,7 @@ being parsed is said to be invalid.</p>
 <br/>
 
 </p>
-<p style="line-height: 100%; margin-bottom: 0cm"><b><font size="4" style="font-size: 15pt"><span style="font-style: normal">3.</span></font><font size="4" style="font-size: 15pt"><span style="font-style: normal">1</span></font><font size="4" style="font-size: 15pt"><span style="font-style: normal">
+<p style="line-height: 100%; margin-bottom: 0cm"><b><font size="4" style="font-size: 15pt"><span style="font-style: normal">4</span></font><font size="4" style="font-size: 15pt"><span style="font-style: normal">.</span></font><font size="4" style="font-size: 15pt"><span style="font-style: normal">1</span></font><font size="4" style="font-size: 15pt"><span style="font-style: normal">
 Pa</span></font><font size="4" style="font-size: 15pt"><span style="font-style: normal">rs</span></font><font size="4" style="font-size: 15pt"><span style="font-style: normal">ing
 an extremely small executable file</span></font></b></p>
 <p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
@@ -427,7 +495,8 @@ file in the following steps:</span></span></p>
 	shall designate an address in the code where the control is
 	transferred to when the execution starts.</span></span></p>
 	<li><p style="line-height: 100%; margin-bottom: 0cm"><span style="font-style: normal"><span style="font-weight: normal">The
-	next </span></span><span style="font-style: normal"><span style="font-weight: normal">sequence
+	next </span></span><span style="font-style: normal"><span style="font-weight: normal">optional
+	</span></span><span style="font-style: normal"><span style="font-weight: normal">sequence
 	of </span></span><span style="font-style: normal"><span style="font-weight: normal">bytes
 	constitute</span></span><span style="font-style: normal"><span style="font-weight: normal">s</span></span><span style="font-style: normal"><span style="font-weight: normal">
 	the </span></span><i><span style="font-weight: normal">code</span></i><span style="font-style: normal"><span style="font-weight: normal">.</span></span></p>
@@ -436,7 +505,7 @@ file in the following steps:</span></span></p>
 <br/>
 
 </p>
-<p style="line-height: 100%; margin-bottom: 0cm"><font size="4" style="font-size: 15pt"><b><span style="font-style: normal">3.</span><span style="font-style: normal">2</span><span style="font-style: normal">
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="4" style="font-size: 15pt"><b><span style="font-style: normal">4</span><span style="font-style: normal">.</span><span style="font-style: normal">2</span><span style="font-style: normal">
 Parsing an extremely small loadable file</span></b></font></p>
 <p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
 <br/>
@@ -471,7 +540,8 @@ file in the following steps:</span></span></p>
 	shall designate an address in the code where the control is
 	transferred to when the execution starts.</span></span></p>
 	<li><p style="line-height: 100%; margin-bottom: 0cm"><span style="font-style: normal"><span style="font-weight: normal">The
-	next </span></span><span style="font-style: normal"><span style="font-weight: normal">sequence
+	next </span></span><span style="font-style: normal"><span style="font-weight: normal">optional
+	</span></span><span style="font-style: normal"><span style="font-weight: normal">sequence
 	of </span></span><span style="font-style: normal"><span style="font-weight: normal">bytes
 	constitute</span></span><span style="font-style: normal"><span style="font-weight: normal">s</span></span><span style="font-style: normal"><span style="font-weight: normal">
 	the </span></span><i><span style="font-weight: normal">code</span></i><span style="font-style: normal"><span style="font-weight: normal">.</span></span></p>
@@ -550,7 +620,7 @@ file structure:</span></p>
 	<li><p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
 	8 bytes: entry point</p>
 	<li><p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
-	* bytes: code</p>
+	0 or more bytes: code</p>
 </ul>
 <p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
 <br/>
@@ -568,7 +638,7 @@ file structure:</span></p>
 	<li><p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
 	8 bytes: entry point</p>
 	<li><p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
-	* bytes: code</p>
+	0 or more bytes: code</p>
 </ul>
 <p style="font-style: normal; line-height: 100%; margin-bottom: 0cm; page-break-before: always">
 <b>Contributions</b></p>
@@ -603,7 +673,7 @@ contributions of the following people:</p>
 	machine, a programming language interpreter.</p>
 </div>
 <div title="footer"><p style="line-height: 100%; margin-top: 0.5cm; margin-bottom: 0cm">
-	<span style="background: #c0c0c0"><sdfield type=PAGE subtype=RANDOM format=PAGE>8</sdfield></span></p>
+	<span style="background: #c0c0c0"><sdfield type=PAGE subtype=RANDOM format=PAGE>9</sdfield></span></p>
 </div>
 </body>
 </html>
