@@ -5,7 +5,7 @@
 	<title></title>
 	<meta name="generator" content="LibreOffice 7.3.7.2 (Linux)"/>
 	<meta name="created" content="2023-01-23T23:54:33.935675256"/>
-	<meta name="changed" content="2023-01-26T01:23:24.023894363"/>
+	<meta name="changed" content="2023-01-26T01:34:07.678296141"/>
 	<style type="text/css">
 		@page { size: 21cm 29.7cm; margin: 2cm }
 		p { line-height: 115%; margin-bottom: 0.25cm; background: transparent }
@@ -461,22 +461,24 @@ file in the following steps:</span></span></p>
 	of the heap</span></i><span style="font-style: normal"><span style="font-weight: normal">
 	</span></span><span style="font-style: normal"><span style="font-weight: normal">(in
 	bytes)</span></span><span style="font-style: normal"><span style="font-weight: normal">.
-	It is the maximum size the heap can have. If the size of the heap
-	exceeds this maximum size </span></span><span style="font-style: normal"><span style="font-weight: normal">during
-	execution</span></span><span style="font-style: normal"><span style="font-weight: normal">,
-	the behavior of the interpreter is not defined by this standard. </span></span><span style="font-style: normal"><span style="font-weight: normal">If
-	the interpreter does not have a heap, this data is ignored.</span></span></p>
+	It is the maximum size the heap can have </span></span><span style="font-style: normal"><span style="font-weight: normal">during
+	execution</span></span><span style="font-style: normal"><span style="font-weight: normal">.
+	</span></span><span style="font-style: normal"><span style="font-weight: normal">If
+	the interpreter does not have a heap </span></span><span style="font-style: normal"><span style="font-weight: normal">or
+	does not allow the action of setting a maximum size of the heap</span></span><span style="font-style: normal"><span style="font-weight: normal">,
+	this data is ignored.</span></span></p>
 	<li><p style="line-height: 100%; margin-bottom: 0cm"><span style="font-style: normal"><span style="font-weight: normal">The
 	following </span></span><span style="font-style: normal"><span style="font-weight: normal">8</span></span><span style="font-style: normal"><span style="font-weight: normal">
 	bytes designate the </span></span><i><span style="font-weight: normal">size
-	of the stack</span></i><span style="font-style: normal"><span style="font-weight: normal">
-	</span></span><span style="font-style: normal"><span style="font-weight: normal">(in
-	bytes)</span></span><span style="font-style: normal"><span style="font-weight: normal">.
-	It is the maximum size the stack can have. If the size of the stack
-	exceeds this maximum size </span></span><span style="font-style: normal"><span style="font-weight: normal">during
-	execution</span></span><span style="font-style: normal"><span style="font-weight: normal">,
-	the behavior of the interpreter is not defined by this standard. </span></span><span style="font-style: normal"><span style="font-weight: normal">If
-	the interpreter does not have a stack, this data is ignored.</span></span></p>
+	of the stack</span></i><span style="font-style: normal"><span style="font-weight: normal">.
+	It is the maximum size the stack can have </span></span><span style="font-style: normal"><span style="font-weight: normal">during
+	execution</span></span><span style="font-style: normal"><span style="font-weight: normal">.
+	</span></span><span style="font-style: normal"><span style="font-weight: normal">The
+	unit of the size of the stack is interpreter-defined.</span></span><span style="font-style: normal"><span style="font-weight: normal">
+	</span></span><span style="font-style: normal"><span style="font-weight: normal">If
+	the interpreter does not have a stack </span></span><span style="font-style: normal"><span style="font-weight: normal">or
+	does not allow the action of setting a maximum size of the stack</span></span><span style="font-style: normal"><span style="font-weight: normal">,
+	this data is ignored.</span></span></p>
 	<li><p style="line-height: 100%; margin-bottom: 0cm"><span style="font-style: normal"><span style="font-weight: normal">The
 	next 8 byte</span></span><span style="font-style: normal"><span style="font-weight: normal">s</span></span><span style="font-style: normal"><span style="font-weight: normal">
 	</span></span><span style="font-style: normal"><span style="font-weight: normal">constitute</span></span><span style="font-style: normal"><span style="font-weight: normal">
