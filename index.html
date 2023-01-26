@@ -5,7 +5,7 @@
 	<title></title>
 	<meta name="generator" content="LibreOffice 7.3.7.2 (Linux)"/>
 	<meta name="created" content="2023-01-23T23:54:33.935675256"/>
-	<meta name="changed" content="2023-01-26T01:34:07.678296141"/>
+	<meta name="changed" content="2023-01-26T13:02:29.975597781"/>
 	<style type="text/css">
 		@page { size: 21cm 29.7cm; margin: 2cm }
 		p { line-height: 115%; margin-bottom: 0.25cm; background: transparent }
@@ -115,7 +115,7 @@ not covered by this standard.</span></p>
 	<p lang="zxx" style="line-height: 100%; margin-bottom: 0cm"><a href="#__RefHeading___Toc1018_225939230">Introduction	4</a></p>
 	<p lang="zxx" style="line-height: 100%; margin-bottom: 0cm"><a href="#__RefHeading___Toc1020_225939230">1.
 	Terms and definitions	5</a></p>
-	<p lang="zxx" style="line-height: 100%; margin-bottom: 0cm"><a href="#__RefHeading___Toc1022_225939230">2.
+	<p lang="zxx" style="line-height: 100%; margin-bottom: 0cm"><a href="#__RefHeading___Toc1294_278047018">2.
 	Environments	6</a></p>
 	<p lang="zxx" style="line-height: 100%; margin-bottom: 0cm"><a href="#__RefHeading___Toc1024_225939230"><span style="font-style: normal">3</span><span style="font-style: normal">.
 	Limits</span>	6</a></p>
@@ -252,9 +252,12 @@ interpreter-defined entity or object</p>
 <p style="line-height: 100%; margin-bottom: 0cm"><font size="4" style="font-size: 15pt"><b>1.11
 execution</b></font></p>
 <p style="line-height: 100%; margin-bottom: 0cm"><span style="font-weight: normal">process
-of parsing </span><span style="font-weight: normal">code</span><span style="font-style: normal"><span style="font-weight: normal">
+of parsing </span><span style="font-weight: normal">one or more
+sequence of bytes in </span><span style="font-weight: normal">a</span><span style="font-weight: normal">
+</span><span style="font-weight: normal">loaded </span><span style="font-weight: normal">code</span><span style="font-style: normal"><span style="font-weight: normal">
 </span></span><span style="font-style: normal"><span style="font-weight: normal">in
-an interpreter-defined way<a class="sdfootnoteanc" name="sdfootnote1anc" href="#sdfootnote1sym"><sup>1</sup></a></span></span></p>
+a way </span></span><span style="font-style: normal"><span style="font-weight: normal">that
+may or may not be documented by the interpreter</span></span><span style="font-style: normal"><span style="font-weight: normal"><a class="sdfootnoteanc" name="sdfootnote1anc" href="#sdfootnote1sym"><sup>1</sup></a></span></span></p>
 <p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
 <br/>
 
@@ -278,10 +281,13 @@ the result yielded after a successful parse of data</p>
 </p>
 <p style="font-style: normal; line-height: 100%; margin-bottom: 0cm"><font size="4" style="font-size: 15pt"><b>1.14
 load</b></font></p>
-<p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
-place in memory</p>
-<h1 class="western" style="page-break-before: always"><a name="__RefHeading___Toc1022_225939230"></a>
-2. Environments</h1>
+<p style="line-height: 100%; margin-bottom: 0cm"><span style="font-style: normal"><span style="font-weight: normal">place
+in memor</span></span><span style="font-style: normal"><span style="font-weight: normal">y</span></span></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<h1 class="western"><a name="__RefHeading___Toc1294_278047018"></a>2.
+Environments</h1>
 <p style="line-height: 100%; margin-bottom: 0cm"><br/>
 
 </p>
@@ -414,7 +420,7 @@ extremely small executable file</span></font></h2>
 
 </p>
 <p style="line-height: 100%; margin-bottom: 0cm"><span style="font-style: normal"><span style="font-weight: normal">1</span></span><span style="font-style: normal"><span style="font-weight: normal">
-An interpreter shall parse a </span></span><span style="font-style: normal"><span style="font-weight: normal">loaded</span></span><span style="font-style: normal"><span style="font-weight: normal">
+An interpreter shall parse a</span></span><span style="font-style: normal"><span style="font-weight: normal">n</span></span><span style="font-style: normal"><span style="font-weight: normal">
 </span></span><i><span style="font-weight: normal">extremely small
 executable</span></i><span style="font-style: normal"><span style="font-weight: normal">
 file in the following steps:</span></span></p>
@@ -485,7 +491,9 @@ file in the following steps:</span></span></p>
 	the </span></span><i><span style="font-weight: normal">entry-point</span></i><span style="font-style: normal"><span style="font-weight: normal">.
 	</span></span><span style="font-style: normal"><span style="font-weight: normal">It
 	shall designate an address where the control is transferred to when
-	the execution starts.</span></span></p>
+	the execution starts. </span></span><span style="font-style: normal"><span style="font-weight: normal">This
+	address must designate an object in the loaded code; otherwise, the
+	file is invalid and the parsing stops.</span></span></p>
 	<li><p style="line-height: 100%; margin-bottom: 0cm"><span style="font-style: normal"><span style="font-weight: normal">The
 	next </span></span><span style="font-style: normal"><span style="font-weight: normal">optional
 	</span></span><span style="font-style: normal"><span style="font-weight: normal">sequence
@@ -505,7 +513,7 @@ extremely small loadable file</span></h2>
 
 </p>
 <p style="line-height: 100%; margin-bottom: 0cm"><span style="font-style: normal"><span style="font-weight: normal">1</span></span><span style="font-style: normal"><span style="font-weight: normal">
-An interpreter shall parse a </span></span><span style="font-style: normal"><span style="font-weight: normal">loaded</span></span><span style="font-style: normal"><span style="font-weight: normal">
+An interpreter shall parse a</span></span><span style="font-style: normal"><span style="font-weight: normal">n</span></span><span style="font-style: normal"><span style="font-weight: normal">
 </span></span><i><span style="font-weight: normal">extremely small
 </span></i><i><span style="font-weight: normal">loadable</span></i><span style="font-style: normal"><span style="font-weight: normal">
 file in the following steps:</span></span></p>
@@ -539,7 +547,9 @@ file in the following steps:</span></span></p>
 	the </span></span><i><span style="font-weight: normal">entry-point</span></i><span style="font-style: normal"><span style="font-weight: normal">.
 	</span></span><span style="font-style: normal"><span style="font-weight: normal">It
 	shall designate an address where the control is transferred to when
-	the execution starts.</span></span></p>
+	the execution starts. </span></span><span style="font-style: normal"><span style="font-weight: normal">This
+	address must designate an object in the loaded code; otherwise, the
+	file is invalid and the parsing stops.</span></span></p>
 	<li><p style="line-height: 100%; margin-bottom: 0cm"><span style="font-style: normal"><span style="font-weight: normal">The
 	next </span></span><span style="font-style: normal"><span style="font-weight: normal">optional
 	</span></span><span style="font-style: normal"><span style="font-weight: normal">sequence
@@ -614,7 +624,7 @@ file structure:</span></p>
 	<li><p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
 	4 bytes: alignment of the heap</p>
 	<li><p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
-	4 bytes: padding (unset)</p>
+	4 bytes: padding</p>
 	<li><p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
 	8 bytes: size of the heap</p>
 	<li><p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
@@ -682,8 +692,8 @@ contributions of the following people:</p>
 <p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
 1 Somdipto Chakraborty</p>
 <div id="sdfootnote1"><p class="sdfootnote"><a class="sdfootnotesym" name="sdfootnote1sym" href="#sdfootnote1anc">1</a>For
-	example, the code <span style="font-style: normal">may be passed on
-	to the CPU for it to execute it.</span></p>
+	example, a processor might fetch intructions and <span style="font-style: normal">execut</span><span style="font-style: normal">e
+	them</span><span style="font-style: normal">.</span></p>
 </div>
 <div id="sdfootnote2"><p class="sdfootnote"><a class="sdfootnotesym" name="sdfootnote2sym" href="#sdfootnote2anc">2</a>This
 	is included to avoid endianness conflicts between the interpreter
