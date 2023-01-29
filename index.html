@@ -5,7 +5,7 @@
 	<title></title>
 	<meta name="generator" content="LibreOffice 7.3.7.2 (Linux)"/>
 	<meta name="created" content="2023-01-23T23:54:33.935675256"/>
-	<meta name="changed" content="2023-01-26T13:49:38.720029987"/>
+	<meta name="changed" content="2023-01-29T22:51:55.290242108"/>
 	<style type="text/css">
 		@page { size: 21cm 29.7cm; margin: 2cm }
 		p { line-height: 115%; margin-bottom: 0.25cm; background: transparent }
@@ -25,7 +25,10 @@
 </head>
 <body lang="en-IN" link="#000080" vlink="#800000" dir="ltr"><p align="center" style="line-height: 100%; margin-bottom: 0cm">
 <font size="5" style="font-size: 18pt"><b>The Extremely Small File
-Format Specification (Draft)</b></font></p>
+Format </b></font><font size="5" style="font-size: 18pt"><b>23</b></font><font size="5" style="font-size: 18pt"><b>
+Specification (Draft)</b></font></p>
+<p align="center" style="line-height: 100%; margin-bottom: 0cm">Revision
+1</p>
 <p align="center" style="line-height: 100%; margin-bottom: 0cm">January
 2023</p>
 <p align="center" style="line-height: 100%; margin-bottom: 0cm"><br/>
@@ -167,6 +170,27 @@ the Extremely Small File Format specification.</p>
 <p style="line-height: 100%; margin-bottom: 0cm"><span style="font-weight: normal">3</span><span style="font-weight: normal">
 </span><span style="font-weight: normal">Footnotes and the annexes
 are informative.</span></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><span style="font-weight: normal">4
+</span><span style="font-weight: normal">Major changes from the
+previous revision include:</span></p>
+<ul>
+	<li><p style="line-height: 100%; margin-bottom: 0cm"><span style="font-weight: normal">addition
+	of specification version in the </span><i><span style="font-weight: normal">extremely
+	small executable</span></i><span style="font-weight: normal"> and
+	</span><i><span style="font-weight: normal">extremely small loadable</span></i><span style="font-weight: normal">
+	file </span><span style="font-weight: normal">structure</span></p>
+	<li><p style="line-height: 100%; margin-bottom: 0cm"><span style="font-weight: normal">removal
+	of padding bytes from the </span><i><span style="font-weight: normal">extremely
+	small executable</span></i><span style="font-weight: normal"> file
+	structure</span></p>
+	<li><p style="line-height: 100%; margin-bottom: 0cm"><span style="font-weight: normal">addition
+	of padding bytes in the </span><i><span style="font-weight: normal">extremely
+	small loadable</span></i><span style="font-weight: normal"> file
+	structure</span></p>
+</ul>
 <h1 class="western" style="page-break-before: always"><a name="__RefHeading___Toc1020_225939230"></a>
 1. Terms and definitions</h1>
 <p style="line-height: 100%; margin-bottom: 0cm"><br/>
@@ -211,7 +235,8 @@ data</p>
 data</b></font></p>
 <p style="line-height: 100%; margin-bottom: 0cm">sequence of bytes
 that denote on<span style="font-style: normal">e of: the magic
-number, the alignment of </span><span style="font-style: normal">the
+number, </span><span style="font-style: normal">the specification
+version, </span><span style="font-style: normal">the alignment of </span><span style="font-style: normal">the
 </span><span style="font-style: normal">code, the alignment of the
 heap, the size of the heap, the size of the stack, and the
 entry-point.</span></p>
@@ -283,7 +308,8 @@ the result yielded after a successful parse of data</p>
 load</b></font></p>
 <p style="line-height: 100%; margin-bottom: 0cm"><span style="font-style: normal"><span style="font-weight: normal">place
 in memor</span></span><span style="font-style: normal"><span style="font-weight: normal">y</span></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+<p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
+<br/>
 
 </p>
 <p style="line-height: 100%; margin-bottom: 0cm"><font size="4" style="font-size: 15pt"><b><span style="font-style: normal">1.</span><span style="font-style: normal">15
@@ -292,7 +318,8 @@ parse</span></b></font></p>
 sense of by </span></span><span style="font-style: normal"><span style="font-weight: normal">read</span></span><span style="font-style: normal"><span style="font-weight: normal">ing</span></span><span style="font-style: normal"><span style="font-weight: normal">
 </span></span><span style="font-style: normal"><span style="font-weight: normal">an
 </span></span><span style="font-style: normal"><span style="font-weight: normal">objec</span></span><span style="font-style: normal"><span style="font-weight: normal">t</span></span></p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+<p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
+<br/>
 
 </p>
 <h1 class="western"><a name="__RefHeading___Toc1294_278047018"></a>2.
@@ -444,6 +471,10 @@ file in the following steps:</span></span></p>
 	of </span></span><span style="font-style: normal"><span style="font-weight: normal">files.
 	</span></span><span style="font-style: normal"><span style="font-weight: normal">For
 	any other value, the file is invalid and the parsing stops.</span></span></p>
+	<li><p style="line-height: 100%; margin-bottom: 0cm"><span style="font-style: normal"><span style="font-weight: normal">T</span></span><span style="font-style: normal"><span style="font-weight: normal">he
+	following 4 bytes designate the specification version. The value
+	yielded from parsing this data shall be equal to 35. Otherwise, the
+	file is invalid and the parsing stops.</span></span></p>
 	<li><p style="line-height: 100%; margin-bottom: 0cm"><span style="font-style: normal"><span style="font-weight: normal">The
 	next 4 bytes designate the </span></span><i><span style="font-weight: normal">alignment
 	of the code</span></i><span style="font-style: normal"><span style="font-weight: normal">
@@ -457,7 +488,8 @@ file in the following steps:</span></span></p>
 	action of </span></span><span style="font-style: normal"><span style="font-weight: normal">aligning
 	the code to a specific boundary, this data is ignored.</span></span></p>
 	<li><p style="line-height: 100%; margin-bottom: 0cm"><span style="font-style: normal"><span style="font-weight: normal">The
-	following 4 bytes designate the </span></span><i><span style="font-weight: normal">alignment
+	</span></span><span style="font-style: normal"><span style="font-weight: normal">next</span></span><span style="font-style: normal"><span style="font-weight: normal">
+	4 bytes designate the </span></span><i><span style="font-weight: normal">alignment
 	of the heap</span></i><span style="font-style: normal"><span style="font-weight: normal">
 	</span></span><span style="font-style: normal"><span style="font-weight: normal">(in
 	bytes)</span></span><span style="font-style: normal"><span style="font-weight: normal">.
@@ -467,12 +499,10 @@ file in the following steps:</span></span></p>
 	the parsing stops. </span></span><span style="font-style: normal"><span style="font-weight: normal">If
 	the interpreter does not have a heap or does not support the action
 	of aligning the heap to a specific boundary, this data is ignored.</span></span></p>
-	<li><p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
-	The next 4 bytes are the padding bytes and shall be ignored by the
-	interpreter.</p>
 	<li><p style="line-height: 100%; margin-bottom: 0cm"><span style="font-style: normal"><span style="font-weight: normal">The
+	</span></span><span style="font-style: normal"><span style="font-weight: normal">following
 	</span></span><span style="font-style: normal"><span style="font-weight: normal">8</span></span><span style="font-style: normal"><span style="font-weight: normal">
-	bytes succeeding the padding bytes designate the </span></span><i><span style="font-weight: normal">size
+	bytes designate the </span></span><i><span style="font-weight: normal">size
 	of the heap</span></i><span style="font-style: normal"><span style="font-weight: normal">
 	</span></span><span style="font-style: normal"><span style="font-weight: normal">(in
 	bytes)</span></span><span style="font-style: normal"><span style="font-weight: normal">.
@@ -537,6 +567,10 @@ file in the following steps:</span></span></p>
 	of </span></span><span style="font-style: normal"><span style="font-weight: normal">files.
 	</span></span><span style="font-style: normal"><span style="font-weight: normal">For
 	any other value, the file is invalid and the parsing stops.</span></span></p>
+	<li><p style="line-height: 100%; margin-bottom: 0cm"><span style="font-style: normal"><span style="font-weight: normal">T</span></span><span style="font-style: normal"><span style="font-weight: normal">he
+	following 4 bytes designate the specification version. The value
+	yielded from parsing this data shall be equal to 35. Otherwise, the
+	file is invalid and the parsing stops.</span></span></p>
 	<li><p style="line-height: 100%; margin-bottom: 0cm"><span style="font-style: normal"><span style="font-weight: normal">The
 	next 4 bytes designate the </span></span><i><span style="font-weight: normal">alignment
 	of the code</span></i><span style="font-style: normal"><span style="font-weight: normal">
@@ -549,9 +583,13 @@ file in the following steps:</span></span></p>
 	the interpreter does not support </span></span><span style="font-style: normal"><span style="font-weight: normal">the
 	action of </span></span><span style="font-style: normal"><span style="font-weight: normal">aligning
 	the code to a specific boundary, this data is ignored.</span></span></p>
+	<li><p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
+	<span style="font-style: normal"><span style="font-weight: normal">The
+	next 4 bytes are the padding bytes and shall be ignored by the
+	interpreter.</span></span></p>
 	<li><p style="line-height: 100%; margin-bottom: 0cm"><span style="font-style: normal"><span style="font-weight: normal">The
-	</span></span><span style="font-style: normal"><span style="font-weight: normal">following</span></span><span style="font-style: normal"><span style="font-weight: normal">
-	8 byte</span></span><span style="font-style: normal"><span style="font-weight: normal">s</span></span><span style="font-style: normal"><span style="font-weight: normal">
+	8 </span></span><span style="font-style: normal"><span style="font-weight: normal">bytes
+	succeeding the padding </span></span><span style="font-style: normal"><span style="font-weight: normal">byte</span></span><span style="font-style: normal"><span style="font-weight: normal">s</span></span><span style="font-style: normal"><span style="font-weight: normal">
 	</span></span><span style="font-style: normal"><span style="font-weight: normal">constitute</span></span><span style="font-style: normal"><span style="font-weight: normal">
 	the </span></span><i><span style="font-weight: normal">entry-point</span></i><span style="font-style: normal"><span style="font-weight: normal">.
 	</span></span><span style="font-style: normal"><span style="font-weight: normal">It

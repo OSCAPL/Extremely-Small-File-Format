@@ -9,9 +9,9 @@ import "path/to/import/types.chloreh"
 
 struct esxf
   u32: magic_number
+  u32: specification_version
   u32: code_alignment
   u32: heap_alignment
-  u32: padding
   u64: heap_size
   u64: stack_size
   u64: entry_point
@@ -22,6 +22,8 @@ struct esxf
 
 struct esdf
   u32: magic_number
+  u32: specification_version
   u32: code_alignment
+  u32: padding
   u64: entry_point
   p: code!
