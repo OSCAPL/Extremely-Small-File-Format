@@ -5,7 +5,7 @@
 	<title></title>
 	<meta name="generator" content="LibreOffice 7.3.7.2 (Linux)"/>
 	<meta name="created" content="2023-01-23T23:54:33.935675256"/>
-	<meta name="changed" content="2023-01-30T16:29:52.201011449"/>
+	<meta name="changed" content="2023-01-31T20:43:12.988887991"/>
 	<style type="text/css">
 		@page { size: 21cm 29.7cm; margin: 2cm }
 		p { line-height: 115%; margin-bottom: 0.25cm; background: transparent }
@@ -28,7 +28,7 @@
 Format </b></font><font size="5" style="font-size: 18pt"><b>23</b></font><font size="5" style="font-size: 18pt"><b>
 Specification (Draft)</b></font></p>
 <p align="center" style="line-height: 100%; margin-bottom: 0cm">Revision
-1</p>
+2</p>
 <p align="center" style="line-height: 100%; margin-bottom: 0cm">January
 2023</p>
 <p align="center" style="line-height: 100%; margin-bottom: 0cm"><br/>
@@ -133,12 +133,10 @@ not covered by this standard.</span></p>
 	<a href="#__RefHeading___Toc1030_225939230"><span style="font-style: normal">4</span><span style="font-style: normal">.</span><span style="font-style: normal">2</span><span style="font-style: normal">
 	Parsing a</span><span style="font-style: normal">n</span><span style="font-style: normal">
 	extremely small loadable file</span>	7</a></p>
-	<p lang="zxx" style="line-height: 100%; margin-bottom: 0cm"><a href="#__RefHeading___Toc1032_225939230">Annex
-	A. Environment details (informative)	7</a></p>
 	<p lang="zxx" style="line-height: 100%; margin-bottom: 0cm"><a href="#__RefHeading___Toc1034_225939230">Annex
-	B. Extremely small file structure summary (informative)	8</a></p>
+	A. Extremely small file structure summary (informative)	8</a></p>
 	<p lang="zxx" style="line-height: 100%; margin-bottom: 0cm"><a href="#__RefHeading___Toc973_1655514702">Annex
-	C. Recommended practice (informative)	8</a></p>
+	B. Recommended practice (informative)	8</a></p>
 	<p lang="zxx" style="line-height: 100%; margin-bottom: 0cm"><a href="#__RefHeading___Toc1036_225939230">Contributions	9</a></p>
 </div>
 <p style="font-weight: normal; line-height: 100%; margin-bottom: 0cm">
@@ -178,19 +176,16 @@ are informative.</span></p>
 </span><span style="font-weight: normal">Major changes from the
 previous revision include:</span></p>
 <ul>
-	<li><p style="line-height: 100%; margin-bottom: 0cm"><span style="font-weight: normal">addition
-	of specification version in the </span><i><span style="font-weight: normal">extremely
-	small executable</span></i><span style="font-weight: normal"> and
-	</span><i><span style="font-weight: normal">extremely small loadable</span></i><span style="font-weight: normal">
-	file </span><span style="font-weight: normal">structure</span></p>
 	<li><p style="line-height: 100%; margin-bottom: 0cm"><span style="font-weight: normal">removal
-	of padding bytes from the </span><i><span style="font-weight: normal">extremely
-	small executable</span></i><span style="font-weight: normal"> file
-	structure</span></p>
+	of </span><b>Annex A. Environment details</b></p>
 	<li><p style="line-height: 100%; margin-bottom: 0cm"><span style="font-weight: normal">addition
-	of padding bytes in the </span><i><span style="font-weight: normal">extremely
-	small loadable</span></i><span style="font-weight: normal"> file
-	structure</span></p>
+	of the phrase “</span><span style="font-style: normal"><span style="font-weight: normal">considering
+	each bit contributes to the value of the result” </span></span><span style="font-style: normal"><span style="font-weight: normal">in
+	</span></span><b><span style="font-style: normal">Annex C paragraph
+	2</span></b></p>
+	<li><p style="line-height: 100%; margin-bottom: 0cm"><span style="font-style: normal"><span style="font-weight: normal">r</span></span><span style="font-style: normal"><span style="font-weight: normal">emoval
+	of the word “yielded” in </span></span><b><span style="font-style: normal">Section
+	1 Subsection 1.13</span></b></p>
 </ul>
 <h1 class="western" style="page-break-before: always"><a name="__RefHeading___Toc1020_225939230"></a>
 1. Terms and definitions</h1>
@@ -300,7 +295,7 @@ interpreter to document</p>
 <p style="font-style: normal; line-height: 100%; margin-bottom: 0cm"><font size="4" style="font-size: 15pt"><b>1.13
 value</b></font></p>
 <p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
-the result yielded after a successful parse of data</p>
+the result after a successful parse of data</p>
 <p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
 <br/>
 
@@ -608,44 +603,8 @@ file in the following steps:</span></span></p>
 <br/>
 
 </p>
-<h1 class="western"><a name="__RefHeading___Toc1032_225939230"></a>Annex
-A. Environment details (informative)</h1>
-<p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
-<br/>
-
-</p>
-<p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
-1 This annex tries to explain the relation between an interpreter, a
-writer and real-life implementations of those.</p>
-<p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
-<br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="font-style: normal"><span style="font-weight: normal">2
-A</span></span><span style="font-style: normal"><span style="font-weight: normal">ny</span></span><span style="font-style: normal"><span style="font-weight: normal">
-translator<a class="sdfootnoteanc" name="sdfootnote3anc" href="#sdfootnote3sym"><sup>3</sup></a></span></span><span style="font-style: normal"><span style="font-weight: normal">
-</span></span><span style="font-style: normal"><span style="font-weight: normal">that
-can generate a valid </span></span><i><span style="font-weight: normal">extremely
-small executable</span></i><span style="font-style: normal"><span style="font-weight: normal">
-or </span></span><i><span style="font-weight: normal">extremely small
-loadable</span></i><span style="font-style: normal"><span style="font-weight: normal">
-file can be considered </span></span><span style="font-style: normal"><span style="font-weight: normal">to
-be </span></span><span style="font-style: normal"><span style="font-weight: normal">a
-writer.</span></span></p>
-<p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
-<br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><span style="font-style: normal"><span style="font-weight: normal">3
-An operating environment<a class="sdfootnoteanc" name="sdfootnote4anc" href="#sdfootnote4sym"><sup>4</sup></a>
-that can execute the translated file</span></span><span style="font-style: normal"><span style="font-weight: normal">
-can be considered to be an interpreter.</span></span></p>
-<p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
-<br/>
-
-</p>
 <h1 class="western"><a name="__RefHeading___Toc1034_225939230"></a>Annex
-B. Extremely small file structure summary (informative)</h1>
+A. Extremely small file structure summary (informative)</h1>
 <p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
 <br/>
 
@@ -704,7 +663,7 @@ file structure:</span></p>
 
 </p>
 <h1 class="western"><a name="__RefHeading___Toc973_1655514702"></a>Annex
-C. Recommended practice (informative)</h1>
+B. Recommended practice (informative)</h1>
 <p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
 <br/>
 
@@ -722,7 +681,8 @@ computer architectures are introduced.</p>
 practical interpreter, a byte may be composed of a sequence of bits.
 The exact number of bits in a byte is not specified in this annex,
 but for a practical intepreter to be conforming, a byte in such an
-intepreter shall have at least 8 bits.</p>
+intepreter shall have at least 8 bits, considering each bit
+contributes to the value of the result.</p>
 <h1 class="western" style="page-break-before: always"><a name="__RefHeading___Toc1036_225939230"></a>
 Contributions</h1>
 <p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
@@ -745,15 +705,6 @@ contributions of the following people:</p>
 <div id="sdfootnote2"><p class="sdfootnote"><a class="sdfootnotesym" name="sdfootnote2sym" href="#sdfootnote2anc">2</a>This
 	is included to avoid endianness conflicts between the interpreter
 	and the writer.</p>
-</div>
-<div id="sdfootnote3"><p class="sdfootnote"><a class="sdfootnotesym" name="sdfootnote3sym" href="#sdfootnote3anc">3</a>Translator
-	can be one of the entities specified in the following non-exhaustive
-	list: a compiler, a transpiler.</p>
-</div>
-<div id="sdfootnote4"><p class="sdfootnote"><a class="sdfootnotesym" name="sdfootnote4sym" href="#sdfootnote4anc">4</a>An
-	operating environment can be one of the entities specified in the
-	following non-exhaustive list: an operating system, a virtual
-	machine, a programming language interpreter.</p>
 </div>
 <div title="footer"><p style="line-height: 100%; margin-top: 0.5cm; margin-bottom: 0cm">
 	<span style="background: #c0c0c0"><sdfield type=PAGE subtype=RANDOM format=PAGE>9</sdfield></span></p>
