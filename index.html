@@ -5,7 +5,7 @@
 	<title></title>
 	<meta name="generator" content="LibreOffice 7.3.7.2 (Linux)"/>
 	<meta name="created" content="2023-01-23T23:54:33.935675256"/>
-	<meta name="changed" content="2023-01-31T20:43:12.988887991"/>
+	<meta name="changed" content="2023-02-20T17:25:04.312716814"/>
 	<style type="text/css">
 		@page { size: 21cm 29.7cm; margin: 2cm }
 		p { line-height: 115%; margin-bottom: 0.25cm; background: transparent }
@@ -28,7 +28,7 @@
 Format </b></font><font size="5" style="font-size: 18pt"><b>23</b></font><font size="5" style="font-size: 18pt"><b>
 Specification (Draft)</b></font></p>
 <p align="center" style="line-height: 100%; margin-bottom: 0cm">Revision
-2</p>
+3</p>
 <p align="center" style="line-height: 100%; margin-bottom: 0cm">January
 2023</p>
 <p align="center" style="line-height: 100%; margin-bottom: 0cm"><br/>
@@ -176,16 +176,9 @@ are informative.</span></p>
 </span><span style="font-weight: normal">Major changes from the
 previous revision include:</span></p>
 <ul>
-	<li><p style="line-height: 100%; margin-bottom: 0cm"><span style="font-weight: normal">removal
-	of </span><b>Annex A. Environment details</b></p>
-	<li><p style="line-height: 100%; margin-bottom: 0cm"><span style="font-weight: normal">addition
-	of the phrase “</span><span style="font-style: normal"><span style="font-weight: normal">considering
-	each bit contributes to the value of the result” </span></span><span style="font-style: normal"><span style="font-weight: normal">in
-	</span></span><b><span style="font-style: normal">Annex C paragraph
-	2</span></b></p>
-	<li><p style="line-height: 100%; margin-bottom: 0cm"><span style="font-style: normal"><span style="font-weight: normal">r</span></span><span style="font-style: normal"><span style="font-weight: normal">emoval
-	of the word “yielded” in </span></span><b><span style="font-style: normal">Section
-	1 Subsection 1.13</span></b></p>
+	<li><p style="line-height: 100%; margin-bottom: 0cm"><span style="font-weight: normal">fix
+	</span><b>Annex A</b><span style="font-weight: normal"> to specify
+	the updated file structure from Revision 2</span></p>
 </ul>
 <h1 class="western" style="page-break-before: always"><a name="__RefHeading___Toc1020_225939230"></a>
 1. Terms and definitions</h1>
@@ -320,7 +313,8 @@ sense of by </span></span><span style="font-style: normal"><span style="font-wei
 </p>
 <h1 class="western"><a name="__RefHeading___Toc1294_278047018"></a>2.
 Environments</h1>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+<p style="font-weight: normal; line-height: 100%; margin-bottom: 0cm">
+<br/>
 
 </p>
 <p style="line-height: 100%; margin-bottom: 0cm"><span style="font-weight: normal">1
@@ -468,9 +462,10 @@ file in the following steps:</span></span></p>
 	</span></span><span style="font-style: normal"><span style="font-weight: normal">For
 	any other value, the file is invalid and the parsing stops.</span></span></p>
 	<li><p style="line-height: 100%; margin-bottom: 0cm"><span style="font-style: normal"><span style="font-weight: normal">T</span></span><span style="font-style: normal"><span style="font-weight: normal">he
-	following 4 bytes designate the specification version. The value
-	yielded from parsing this data shall be equal to 35. Otherwise, the
-	file is invalid and the parsing stops.</span></span></p>
+	following 4 bytes designate the </span></span><i><span style="font-weight: normal">specification
+	version</span></i><span style="font-style: normal"><span style="font-weight: normal">.
+	The value yielded from parsing this data shall be equal to 35.
+	Otherwise, the file is invalid and the parsing stops.</span></span></p>
 	<li><p style="line-height: 100%; margin-bottom: 0cm"><span style="font-style: normal"><span style="font-weight: normal">The
 	next 4 bytes designate the </span></span><i><span style="font-weight: normal">alignment
 	of the code</span></i><span style="font-style: normal"><span style="font-weight: normal">
@@ -564,9 +559,10 @@ file in the following steps:</span></span></p>
 	</span></span><span style="font-style: normal"><span style="font-weight: normal">For
 	any other value, the file is invalid and the parsing stops.</span></span></p>
 	<li><p style="line-height: 100%; margin-bottom: 0cm"><span style="font-style: normal"><span style="font-weight: normal">T</span></span><span style="font-style: normal"><span style="font-weight: normal">he
-	following 4 bytes designate the specification version. The value
-	yielded from parsing this data shall be equal to 35. Otherwise, the
-	file is invalid and the parsing stops.</span></span></p>
+	following 4 bytes designate the </span></span><i><span style="font-weight: normal">specification
+	version</span></i><span style="font-style: normal"><span style="font-weight: normal">.
+	The value yielded from parsing this data shall be equal to 35.
+	Otherwise, the file is invalid and the parsing stops.</span></span></p>
 	<li><p style="line-height: 100%; margin-bottom: 0cm"><span style="font-style: normal"><span style="font-weight: normal">The
 	next 4 bytes designate the </span></span><i><span style="font-weight: normal">alignment
 	of the code</span></i><span style="font-style: normal"><span style="font-weight: normal">
@@ -626,11 +622,11 @@ file structure:</span></p>
 	<li><p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
 	4 bytes: magic number</p>
 	<li><p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
+	4 bytes: specification version</p>
+	<li><p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
 	4 bytes: alignment of the code</p>
 	<li><p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
 	4 bytes: alignment of the heap</p>
-	<li><p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
-	4 bytes: padding</p>
 	<li><p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
 	8 bytes: size of the heap</p>
 	<li><p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
@@ -652,7 +648,11 @@ file structure:</span></p>
 	<li><p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
 	4 bytes: magic number</p>
 	<li><p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
+	4 bytes: specification version</p>
+	<li><p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
 	4 bytes: alignment of the code</p>
+	<li><p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
+	4 bytes: padding</p>
 	<li><p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
 	8 bytes: entry point</p>
 	<li><p style="font-style: normal; font-weight: normal; line-height: 100%; margin-bottom: 0cm">
