@@ -1,0 +1,206 @@
+\documentclass[a4paper]{article} 
+\usepackage{csquotes, titlesec} %csquotes in case there are quotes, titlesec for titles and sections
+\usepackage[hidelinks]{hyperref} %hyperref to make hyperlinks for the toc
+
+\renewcommand*\contentsname{Table of contents}
+
+\hypersetup{linktoc=all}
+
+\begin{document}
+    \begin{titlepage}
+        \begin{center}
+            \vspace*{1cm} %Upper border thing
+
+            \Large{\textbf{The Extremely Small File Format 23 Specification (Draft)}}
+
+            \normalsize
+
+            \vspace*{1.5cm}
+            Revision 3 \\
+            \vspace*{0.5cm}
+            February 23 \\
+            \vspace*{0.5cm}
+            Somdipto Chakraborty
+
+            \vspace*{7cm}
+            Copyright (c) Somdipto Chakraborty
+
+            This work is licensed under Creative Commons Attribution-NoDerivatives 4.0 International License %maybe a link to CC-BY-ND
+        \end{center}
+    \end{titlepage}
+
+    \section*{Abstract} 
+
+    This standard specifies the structure of \emph{extremely small executable} and \emph{extremely small loadable} files. The purpose of this document is to standardize the \emph{extremely small} file format to promote correctness of such files.
+
+
+    Any additional details of the environment are not covered by this standard. 
+
+    \tableofcontents
+
+    \pagebreak
+
+    \section*{Introduction}
+
+    \begin{enumerate} %labels used because different style
+        \item[1 ] This is a draft version of the Extremely Small File Format specification, and there may be significant changes made to this standard before the final release. This draft version is only meant for those who are interested in contributing to the development of the Extremely Small File Format specification.
+        \item[2 ] Footnotes are provided to clarify certain rules to the reader.
+        \item[3 ] Footnotes and the annexes are informative.
+        \item[4 ] Major changes from the previous revision include:
+            \begin{itemize}
+                \item fix \textbf{Annex A} to specify updated file structure from Revision 2
+            \end{itemize} 
+    \end{enumerate}
+
+    \section{Terms and definitions}
+
+    \subsection{Byte}
+    smallest addressable unit of storage
+
+    \subsection{Object}
+    region of storage
+
+    \subsection{Alignment}
+    reuirement that an object is loaded at an address that is a multiple of a specified number of bytes
+
+    \subsection{Address}
+    an interger that specifies the location of an object in the interpreter
+
+    \subsection{Interpretation}
+    process of parsing data
+
+    \subsection{data}
+    sequence of bytes that denote one of: the magic number, the specification version, the alignment of the code, the alignment of the heap, the size of the heap, the size of the stack, and the entry-point
+
+    \subsection{Behaviour}
+    external appearance or action
+
+    \subsection{Stack}
+    interpreter-defined entity or object
+    
+    \subsection{Heap}
+    interpreter-defined entity or object
+
+    \subsection{Code}
+    interpreter-defined entity or object
+
+    \subsection{Execution}
+    process of parsing one or more sequences of bytes in a loaded code in a way that may or may not be documented by the interpreter\footnotemark[1]
+
+    \subsection{Interpreter-defined}
+    process that is not defined by this standard, rather is left for the interpreter to document
+
+    \subsection{Value}
+    the result after a successful parse of data
+
+    \subsection{Load}
+    place in memory
+
+    \subsection{Parse}
+    make sense of by reading an object
+
+    \footnotetext[1]{For example, a processor might fetch instructions and execute them.}
+
+    \section{Enviornments}
+
+    \begin{enumerate}
+        \item[1 ] For the purpose of describing how data shall be parsed, this standard describes to environments:
+            \begin{itemize}
+                \item the environment that writes the \emph{extremely small executable} or \emph{extremely small loadable} file (the \emph{writer environment}), and
+                \item the environment that parses data in that file (the \emph{interpreter environment}).
+            \end{itemize} 
+        \item[2 ] Data written by the writer shall have the same value when interpreted by the interpreter\footnotemark[2].
+        \item[3 ] Given a valid \emph{extremly small} file, a standard-conforming interpreter is required is required to interpret is exactly as specified by this standard.
+        \item[4 ] For an invalid \emph{extremly small} file, an interpreter is required to quit the parsing process and produce at least one diagnostic message.
+    \end{enumerate}
+
+    \footnotetext[2]{This is included to avoid endianess conflicts between the interpreter and the writer.}
+
+    \section{Limits}
+
+    \begin{enumerate}
+        \item[1 ] This standard imposes no restrictions on the number of bytes that can designate the code.
+        \item[2 ] The value of the alignment of the code shall lie within the range 0 to 4294967295 inclusive.
+        \item[3 ] The value of the alignment of the heap shall lie within the range 0 to 4294967295 inclusive.
+        \item[4 ] The value of the size of the heap shall lie within the range 0 to 18446744073709551615 inclusive.
+        \item[5 ] The value of the size of the stack shall lie within the range 0 to 18446744073709551615 inclusive.
+        \item[6 ] The value of the entry-point shall lie within the range 0 to 18446744073709551615 inclusive.
+    \end{enumerate}
+
+    \section{Parsing}
+
+    \begin{enumerate}
+        \item[1 ] If parsing fails at any stage of the parsing process, the file being parsed is said to be invalid.
+    \end{enumerate}
+    
+    \subsection{Parsing an extremely small executable file}
+
+    \begin{enumerate}
+        \item[1 ] An interpreter shall parse an \emph{extremely small executable} file in the following steps:
+            \begin{itemize}
+                \item The first 4 bytes are parsed. The result shall have the value 933631. This is called the \emph{magic number}, which differntiates an \emph{extremely small executable} file from other types of files. For any other value, the file is invalid and the parsing stops.
+                \item The following 4 bytes designate the \emph{specific version}. The value yielded from parsing this data shall be equal to 35. Otherwise, the file is invalid and parsing stops.
+                \item The next 4 bytes designate the \emph{alignment of the code} (in bytes). It is the boundry the code will be aligned to when it is loaded by the interpreter. If the interpreter does not support such an alignment, the file being parsed is invalid and the parsing stops. If the interpreter does not support the action of aligning the code to a specific boundary, this data is ignored.
+                \item The next 4 bytes designate the \emph{alignment of the heap} (in bytes). It is the boundary the heap will be aligned to when it is loaded by the interpreter. If the interpreter does not support such an alignment, the file being parsed is invalid and the parsing stops. If the interpreter does not have a heap or does not support the action of aligning the heap to a specific boundary, this data is ignored.
+                \item The following 8 bytes designate the \emph{size of the heap} (in bytes). It is the maximum size the heap can have during execution. If the interpreter does not have a heap or does not allow the action of setting a maximum size of the heap, this data is ignored
+                \item The following 8 bytes designate the \emph{size of the stack} (in bytes). It is the maximum size the stack can have during execution. The unit of the size of the stack is interpreter-defined. If the interpreter does not have a stack or does not allow the action of setting a maximum size of the stack, this data is ignored.
+                \item The next 8 bytes constitute the \emph{entry-point}. It shall designate an address where the control is transferred to when the execution starts. This address must designate an object in the loaded code; otherwise, the file is invalid and the parsing stops.
+                \item The next optional sequence of bytes constitutes the \emph{code}.
+            \end{itemize}
+    \end{enumerate}
+
+    \subsection{Parsing an extremely small loadable file}
+
+    \begin{enumerate}
+        \item[1 ] An interpreter shall parse an \emph{extremely small loadable} file in the following steps:
+            \begin{itemize}
+                \item The first 4 bytes. The result shall have the value 930303. This is called the \emph{magic number}, which differentiates it an \emph{extremely small loadable} file from other types of files. For any other value, the file is invalid and the parsing stops.
+                \item The following 4 bytes designate the \emph{specification version}. The value yielded from parsing this data shall be equal to 35. otherwise, the file is invalid and parsing stops.
+                \item The next 4 bytes designate the \emph{alignment of the code} (in bytes). It is the boundry the code will be aligned to when it is loaded by the interpreter. If the interpreter does not support such an alignment, the file being parsed is invalid. If the interpreter does not support the action of aliging the code to a specific boundry, this data is ignored.
+                \item The next 4 bytes are the padding bytes and shall be ignored by the interpreter.
+                \item The next 8 bytes succeeding the padding bytes constitute the \emph{entry-point}. It shall designate an address where the control is transferred to when the execution starts. This address must designate an object in the loaded code; otherwise, the file is invalid and the parsing stops. 
+                \item The next optional sequence of bytes constitutes the \emph{code}
+            \end{itemize}
+    \end{enumerate}
+
+    \section{Annex A. Extremely small file structure summary (informative)}
+
+    \begin{enumerate}
+        \item[1 ] This annex summarises the \emph {extremely small} file structure as described in 4.1 and 4.2. 
+        \item[2 ] The \emph{extremely small executable} file structure:
+            \begin{itemize}
+                \item 4 bytes: magic number
+                \item 4 bytes: specification number
+                \item 4 bytes: alignment of the code
+                \item 4 bytes: alignment of the heap
+                \item 8 bytes: size of the heap
+                \item 8 bytes: size of the stack
+                \item 8 bytes: entry point
+                \item 0 or more bytes: code
+            \end{itemize}
+        \item[3 ] The \emph{extremely small loadable} file structure:
+            \begin{itemize}
+                \item 4 bytes: magic number
+                \item 4 bytes: specification version
+                \item 4 bytes: alignment of the code
+                \item 4 bytes: padding
+                \item 8 bytes: entry point
+                \item 0 or more bytes: code
+            \end{itemize}
+    \end{enumerate}
+
+    \section{Annex B. Recommended practice (informative)}
+
+    \begin{enumerate}
+        \item[1 ] some practices that a practical interpreter is expected to follow. This annex might be updated as new devices and computer architectures are introduced.
+        \item[2 ] Even though it is not explicitly stated in this standard, in a practical interpreter, a byte may be composed of a sequence of bits. The exact number of bits in a byte is not specified in this annex, but for a practical intepreter to be conforming, a byte in such an intepreter shall have at least 8 bits, considering each bit contributes to the value of the result.
+    \end{enumerate}
+
+    \section{Contributions}
+
+    This specification would not have been possible without the contributions of the following people:
+
+    \begin{enumerate}
+        \item[1 ] Somdipto Chakraborty
+    \end{enumerate}
+\end{document}
