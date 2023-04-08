@@ -8,23 +8,23 @@ import "types.chlore"
    the following structure /
 
 struct esxf
-  u32: magic_number
-  u32: specification_version
-  u32: code_alignment
-  u32: heap_alignment
-  u64: heap_size
-  u64: stack_size
-  u64: entry_point
-  p64: code!
+  u4y: magic_number
+  u4y: specification_version
+  u4y: code_alignment
+  u4y: heap_alignment
+  u8y: heap_size
+  u8y: stack_size
+  u8y: entry_point
+  p8y: code!
 
 /  an extremely small loadable file has
    the following structure /
 
 struct esdf
-  u32: magic_number
-  u32: specification_version
-  u32: code_alignment
-  u32: padding
-  u64: entry_point
-  p64: code!
+  u4y: magic_number
+  u4y: specification_version
+  u4y: code_alignment
+  u4y: padding
+  u8y: entry_point
+  p8y: code!
 
