@@ -1,8 +1,8 @@
-import "types.chlore"
-
 /  this is not a part of the specification
    and is only meant to guide interpreter
    implementors /
+
+/ import "types.chloreh" /
 
 /  an extremely small executable file has
    the following structure /
