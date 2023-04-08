@@ -2,6 +2,8 @@
    and is only meant to guide interpreter
    implementors */
 
+/* #include <stdint.h> */
+
 /* an extremely small executable file has
    the following structure */
 
